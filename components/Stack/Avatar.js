@@ -1,7 +1,7 @@
 import React from "react";
 import { Image, TouchableOpacity } from "react-native";
 import { AvContainer, AvImage } from "../../styles/styles";
-import { useNavigation } from "@react-navigation/native"; // Importa useNavigation
+import { useNavigation } from "@react-navigation/native";
 const Avatar = ({ imgUrl }) => {
   const navigation = useNavigation();
   return (
