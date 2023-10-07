@@ -40,8 +40,31 @@ const CoverStyle = {
 };
 
 const StackDesign = {
-  backgroundColor: "#152238",
+  backgroundColor: "red",
 };
+
+/* Avatar */
+const AvContainer = {
+  alignItems: "center",
+};
+const AvImage = {
+  width: 55,
+  height: 55,
+  borderRadius: 50,
+  backgroundColor: "white",
+  ...Platform.select({
+    ios: {
+      shadowColor: "#000",
+      shadowOffset: {
+        width: 0,
+        height: 2,
+      },
+      shadowOpacity: 0.25,
+      shadowRadius: 3.84,
+    },
+  }),
+};
+
 export {
   TrackStyle,
   TitleStyle,
@@ -49,4 +72,6 @@ export {
   BtnOptionsStyle,
   CoverStyle,
   StackDesign,
+  AvContainer,
+  AvImage,
 };
