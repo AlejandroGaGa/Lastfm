@@ -40,7 +40,7 @@ const CoverStyle = {
 };
 
 const StackDesign = {
-  backgroundColor: "red",
+  backgroundColor: "#152238",
 };
 
 /* Avatar */

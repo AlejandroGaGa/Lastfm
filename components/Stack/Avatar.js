@@ -1,12 +1,17 @@
 import React from "react";
-import { View, Image } from "react-native";
+import { Image, TouchableOpacity } from "react-native";
 import { AvContainer, AvImage } from "../../styles/styles";
-
+import { useNavigation } from "@react-navigation/native"; // Importa useNavigation
 const Avatar = ({ imgUrl }) => {
+  const navigation = useNavigation();
   return (
-    <View style={AvContainer}>
+    <TouchableOpacity
+      onPress={() => navigation.navigate("Profile")}
+      activeOpacity={0.7}
+      style={AvContainer}
+    >
       <Image style={AvImage} source={{ uri: imgUrl }} />
-    </View>
+    </TouchableOpacity>
   );
 };
 

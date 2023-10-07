@@ -2,6 +2,7 @@ import { Text, FlatList, SafeAreaView } from "react-native";
 import { getTopTracks } from "../../utils/api/get_top_songs";
 import { useEffect, useState } from "react";
 import { DetailsTrack } from "../../components/Home";
+import { getAuthSession } from "../../utils/api/auth_getMobileSession";
 
 const HomeScreen = () => {
   const [TopTracks, SetTopTracks] = useState([]);
