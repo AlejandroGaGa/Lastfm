@@ -1,8 +1,13 @@
-import { Text, View } from "react-native";
+import { Image, View } from "react-native";
 
 const CoverTrack = ({ img }) => {
-  console.log("🚀 ~ file: CoverTrack.js:4 ~ CoverTrack ~ img:", img);
-  return <View>{/* <Text>{img}</Text> */}</View>;
+  const URL = img["#text"];
+
+  return (
+    <View>
+      <Image source={{ uri: URL }} width={100} height={100} />
+    </View>
+  );
 };
 
 export default CoverTrack;
