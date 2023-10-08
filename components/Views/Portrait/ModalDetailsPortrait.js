@@ -23,6 +23,7 @@ const ModalDetailsPortrait = ({ Track, modalVisible, setModalVisible }) => {
       onSwipeComplete={() => setModalVisible(false)}
       backdropOpacity={0}
       backdropColor="black"
+      style={{ margin: 0 }}
     >
       <View style={CenteredView}>
         <View style={ModalView}>

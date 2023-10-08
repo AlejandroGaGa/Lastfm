@@ -99,6 +99,7 @@ const AvImage = {
 const CenteredView = {
   flex: 1,
   backgroundColor: "transparent",
+  height: "100%",
   alignItems: "center",
   justifyContent: "flex-end",
 };
@@ -110,14 +111,12 @@ const LeftColor = {
   left: 0,
   width: "40%",
   backgroundColor: "#fafbff",
-  borderTopLeftRadius: 80,
+  borderTopLeftRadius: 60,
 };
 const ModalView = {
-  margin: 20,
   backgroundColor: "white",
   borderTopLeftRadius: 60,
   borderTopRightRadius: 60,
-  padding: 35,
   alignItems: "center",
   shadowColor: "#000",
   shadowOffset: {
@@ -129,12 +128,11 @@ const ModalView = {
   elevation: 5,
   width: "100%",
   height: "90%",
-  position: "absolute",
+  bottom: 0,
   justifyContent: "flex-end",
 };
 /* ModalDetailsPortrait */
 const ContainerDetailsStyle = {
-  backgroundColor: "transparent",
   width: "100%",
   display: "flex",
   justifyContent: "flex-start",
