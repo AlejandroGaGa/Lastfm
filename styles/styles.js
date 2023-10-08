@@ -178,6 +178,10 @@ const ButtonPauseStyle = {
   borderRadius: 50,
   padding: 10,
 };
+
+/* Buttons options details music player */
+const ContentButtons = {};
+
 export {
   TrackStyle,
   TitleStyle,
@@ -199,4 +203,5 @@ export {
   ContainerDetailsStyle,
   TitlesDetailsContainerStyles,
   TitlesTextPortrait,
+  ContentButtons,
 };
