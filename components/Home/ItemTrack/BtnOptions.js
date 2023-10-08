@@ -1,5 +1,5 @@
 import { TouchableOpacity } from "react-native";
-import { Ionicons, SimpleLineIcons } from "@expo/vector-icons";
+import { SimpleLineIcons } from "@expo/vector-icons";
 import { BtnOptionsStyle } from "../../../styles/styles";
 const BtnOptions = () => {
   return (

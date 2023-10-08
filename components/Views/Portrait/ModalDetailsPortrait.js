@@ -3,9 +3,11 @@ import { Alert, Modal, Text, Pressable, View } from "react-native";
 import {
   CenteredView,
   ContainerCoverPortrait,
+  ContainerDetailsStyle,
   LeftColor,
   ModalView,
-  TitleStyle,
+  TitlesDetailsContainerStyles,
+  TitlesTextPortrait,
 } from "../../../styles/styles";
 import CoverTrackPortrait from "./CoverTrackPortrait";
 import MusicPlayer from "./MusicPlayer";
@@ -27,21 +29,11 @@ const ModalDetailsPortrait = ({ Track, modalVisible, setModalVisible }) => {
             <View style={ContainerCoverPortrait}>
               <CoverTrackPortrait img={Track.image[3]} />
             </View>
-            <View
-              style={{
-                backgroundColor: "red",
-                width: "100%",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <Text
-                style={{ color: "#504f52", fontSize: 30, fontWeight: "bold" }}
-              >
-                {Track.name}
-              </Text>
-              <Text>{Track.artist.name}</Text>
+            <View style={ContainerDetailsStyle}>
+              <View style={TitlesDetailsContainerStyles}>
+                <Text style={TitlesTextPortrait}>{Track.name}</Text>
+                <Text>{Track.artist.name}</Text>
+              </View>
               <MusicPlayer />
             </View>
 

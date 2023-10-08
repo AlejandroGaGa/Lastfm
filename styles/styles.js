@@ -132,6 +132,52 @@ const ModalView = {
   position: "absolute",
   justifyContent: "flex-end",
 };
+/* ModalDetailsPortrait */
+const ContainerDetailsStyle = {
+  backgroundColor: "transparent",
+  width: "100%",
+  display: "flex",
+  justifyContent: "flex-start",
+  alignItems: "center",
+  height: "40%",
+  flexDirection: "column",
+  gap: 30,
+};
+
+const TitlesDetailsContainerStyles = {
+  display: "flex",
+  alignItems: "center",
+};
+
+const TitlesTextPortrait = {
+  color: "#504f52",
+  fontSize: 40,
+  fontWeight: "bold",
+};
+/* Music player */
+const SliderStyle = {
+  flexDirection: "row",
+  alignItems: "center",
+  marginBottom: "5%",
+};
+const MusicPlayerStyle = {
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  width: "100%",
+};
+const ButtonsPlayerStyle = {
+  display: "flex",
+  flexDirection: "row",
+  justifyContent: "space-between",
+  width: "50%",
+  alignItems: "center",
+};
+const ButtonPauseStyle = {
+  backgroundColor: "yellow",
+  borderRadius: 50,
+  padding: 10,
+};
 export {
   TrackStyle,
   TitleStyle,
@@ -146,4 +192,11 @@ export {
   LeftColor,
   CoverStylePortrait,
   ContainerCoverPortrait,
+  SliderStyle,
+  MusicPlayerStyle,
+  ButtonsPlayerStyle,
+  ButtonPauseStyle,
+  ContainerDetailsStyle,
+  TitlesDetailsContainerStyles,
+  TitlesTextPortrait,
 };
