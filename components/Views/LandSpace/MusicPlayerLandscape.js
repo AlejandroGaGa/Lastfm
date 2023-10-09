@@ -3,14 +3,14 @@ import { View, Text, TouchableOpacity } from "react-native";
 import {
   ButtonPauseStyle,
   ButtonsPlayerStyle,
-  MusicPlayerStyle,
+  MusicPlayerStyleLandspace,
   SliderStyle,
 } from "../../../styles/styles";
 import { Entypo, AntDesign } from "@expo/vector-icons";
 
-const MusicPlayer = () => {
+const MusicPlayerLandscape = () => {
   return (
-    <View style={MusicPlayerStyle}>
+    <View style={MusicPlayerStyleLandspace}>
       <View style={SliderStyle}>
         <Text>3:30</Text>
         <Slider
@@ -31,4 +31,4 @@ const MusicPlayer = () => {
     </View>
   );
 };
-export default MusicPlayer;
+export default MusicPlayerLandscape;

@@ -1,16 +1,16 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { useState } from "react";
+import { ArtistContext } from "./context/AppContext";
 import AppNavigation from "./navigation/Navigation";
 
 export default function App() {
-  return <AppNavigation />;
-}
+  const [favorites, setFavorites] = useState([]);
+  const addFavorite = (artist) => {
+    setFavorites([...favorites, artist]);
+  };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
+  return (
+    <ArtistContext.Provider value={{ favorites, addFavorite }}>
+      <AppNavigation />
+    </ArtistContext.Provider>
+  );
+}

@@ -1,12 +1,5 @@
-import Slider from "@react-native-community/slider";
 import { View, Text, TouchableOpacity } from "react-native";
-import {
-  ButtonPauseStyle,
-  ButtonsPlayerStyle,
-  ContentButtonsLittle,
-  MusicPlayerStyle,
-  SliderStyle,
-} from "../../../styles/styles";
+import { ButtonPauseStyle, ContentButtonsLittle } from "../../../styles/styles";
 import { Entypo, AntDesign } from "@expo/vector-icons";
 
 const MusicPlayerLittle = () => {

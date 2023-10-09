@@ -8,22 +8,22 @@ import Avatar from "../components/Stack/Avatar";
 const Stack = createNativeStackNavigator();
 
 const AppNavigation = () => {
-  const [headerShown, setHeaderShown] = useState(true);
-
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen
-          name="TopTracks"
+          name="Home"
           component={HomeScreen}
           options={{
-            title: "Poll, Top Tracks this week",
+            headerLargeTitle: true,
+            title: "Top",
             headerRight: () => (
               <Avatar imgUrl="https://raw.githubusercontent.com/AlejandroGaGa/images-portafolio/main/ProfileGithub.jpeg" />
             ),
             headerTintColor: "white",
             headerStyle: StackDesign,
             headerTitleAlign: "center",
+            gestureEnabled: false,
           }}
         />
         <Stack.Screen

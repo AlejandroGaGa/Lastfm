@@ -1,4 +1,5 @@
 import { Platform } from "react-native";
+
 const TrackStyle = {
   flex: 1,
   display: "flex",
@@ -29,6 +30,30 @@ const ContainerCoverPortrait = {
   zIndex: 1,
   position: "absolute",
   top: 60,
+};
+const ContainerCoverLandspace = {
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "center",
+  zIndex: 1,
+  position: "absolute",
+  top: 100,
+  left: 50,
+  gap: 45,
+  ...Platform.select({
+    ios: {
+      top: 80,
+      left: 100,
+      width: "60%",
+      shadowColor: "#000",
+      shadowOffset: {
+        width: 0,
+        height: 2,
+      },
+      shadowOpacity: 0.25,
+      shadowRadius: 3.84,
+    },
+  }),
 };
 const ContainerCoverPortraitLittle = {
   display: "flex",
@@ -133,12 +158,20 @@ const ContainerDetailsStyle = {
   alignItems: "center",
   height: "40%",
   flexDirection: "column",
+
+  bottom: "5%",
   gap: 30,
 };
 
 const TitlesDetailsContainerStyles = {
   display: "flex",
   alignItems: "center",
+};
+const TitlesDetailsContainerStylesLands = {
+  display: "flex",
+  alignItems: "center",
+  width: "20%",
+  overflow: "hidden",
 };
 
 const TitlesTextPortrait = {
@@ -151,12 +184,28 @@ const SliderStyle = {
   flexDirection: "row",
   alignItems: "center",
   marginBottom: "5%",
+  ...Platform.select({
+    ios: {
+      marginLeft: "5%",
+    },
+  }),
 };
 const MusicPlayerStyle = {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
   width: "100%",
+  ...Platform.select({
+    ios: {
+      width: "40%",
+    },
+  }),
+};
+const MusicPlayerStyleLandspace = {
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  width: "50%",
 };
 const ButtonsPlayerStyle = {
   display: "flex",
@@ -164,6 +213,11 @@ const ButtonsPlayerStyle = {
   justifyContent: "space-between",
   width: "50%",
   alignItems: "center",
+  ...Platform.select({
+    ios: {
+      width: "100%",
+    },
+  }),
 };
 const ButtonPauseStyle = {
   backgroundColor: "#fafbff",
@@ -184,7 +238,25 @@ const ContainerLittleModal = {
   borderTopRightRadius: 60,
 };
 /* Buttons options details music player */
-const ContentButtons = {};
+const ContentButtons = {
+  flexDirection: "row",
+  width: "100%",
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+  display: "flex",
+  padding: 10,
+};
+
+const ButtonOptionStyle = {
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  gap: 10,
+  padding: 10,
+  borderRadius: 10,
+};
+
 const ContentButtonsLittle = {
   ...(Platform.OS === "ios" && {
     marginLeft: "-10%",
@@ -204,6 +276,20 @@ const LittleSlider = {
   position: "absolute",
   bottom: "20%",
   left: "5%",
+};
+
+const ButtonDownLittleModal = {
+  position: "absolute",
+  right: 30,
+  top: 5,
+  backgroundColor: "red",
+  width: 40,
+  height: 40,
+  borderRadius: 50,
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  backgroundColor: "white",
 };
 
 export {
@@ -231,4 +317,9 @@ export {
   ContainerCoverPortraitLittle,
   ContentButtonsLittle,
   LittleSlider,
+  ButtonDownLittleModal,
+  ContainerCoverLandspace,
+  MusicPlayerStyleLandspace,
+  TitlesDetailsContainerStylesLands,
+  ButtonOptionStyle,
 };

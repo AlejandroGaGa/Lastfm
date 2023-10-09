@@ -1,6 +1,7 @@
 import React from "react";
-import { Text, View, Platform } from "react-native";
+import { Text, View, Platform, TouchableOpacity } from "react-native";
 import {
+  ButtonDownLittleModal,
   ContainerCoverPortraitLittle,
   ContainerLittleModal,
   LeftColor,
@@ -8,15 +9,23 @@ import {
   SubTitleStyle,
 } from "../../../styles/styles";
 import CoverTrackPortrait from "./CoverTrackPortrait";
-import ScrollingText from "../../TextAnimition/ScrollingText";
 import MusicPlayerLittle from "./MusicPlayerLittle";
 import Slider from "@react-native-community/slider";
+import { AntDesign } from "@expo/vector-icons";
 
-const LittleModal = ({ Track }) => {
+const LittleModal = ({ Track, setTrackData }) => {
   const Platf = Platform.OS;
+
   return (
     <View style={ContainerLittleModal}>
       <View style={LeftColor}></View>
+      <TouchableOpacity
+        activeOpacity={0.7}
+        onPress={() => setTrackData(null)}
+        style={ButtonDownLittleModal}
+      >
+        <AntDesign name="down" size={20} color="#4e5d70" />
+      </TouchableOpacity>
       <View style={ContainerCoverPortraitLittle}>
         <CoverTrackPortrait
           img={Track.image[1]}

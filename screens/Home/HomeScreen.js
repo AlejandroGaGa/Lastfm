@@ -8,13 +8,19 @@ import LittleModal from "../../components/Views/Portrait/LittleModal";
 const HomeScreen = () => {
   const [TopTracks, SetTopTracks] = useState([]);
   const [TrackData, setTrackData] = useState(null);
+  const [chargingData, setChargingData] = useState(false);
 
   useEffect(() => {
+    setChargingData(false);
     async function getTopTenTracks() {
       const response = await getTopTracks();
       SetTopTracks(response);
     }
     getTopTenTracks();
+
+    setTimeout(() => {
+      setChargingData(true);
+    }, 3000);
   }, []);
 
   return (
@@ -22,15 +28,24 @@ const HomeScreen = () => {
       <SafeAreaView>
         {TopTracks.length > 0 ? (
           <FlatList
+            style={{ marginTop: 0 }}
             data={TopTracks}
+            keyExtractor={(_item, index) => index.toString()}
             renderItem={({ item }) => (
-              <DetailsTrack track={item} setTrackData={setTrackData} />
+              <DetailsTrack
+                track={item}
+                setTrackData={setTrackData}
+                chargingData={chargingData}
+              />
             )}
+            ListEmptyComponent={<Text>No hay canciones</Text>}
           />
         ) : null}
       </SafeAreaView>
 
-      {TrackData !== null ? <LittleModal Track={TrackData} /> : null}
+      {TrackData !== null ? (
+        <LittleModal Track={TrackData} setTrackData={setTrackData} />
+      ) : null}
     </>
   );
 };
