@@ -4,6 +4,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { HomeScreen, ProfileScreen } from "../screens";
 import { StackDesign } from "../styles/styles";
 import Avatar from "../components/Stack/Avatar";
+import FavoritesScreen from "../screens/Favorites/FavoritesScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -31,6 +32,19 @@ const AppNavigation = () => {
           component={ProfileScreen}
           options={{
             title: "My Profile",
+            headerRight: () => (
+              <Avatar imgUrl="https://raw.githubusercontent.com/AlejandroGaGa/images-portafolio/main/ProfileGithub.jpeg" />
+            ),
+            headerTintColor: "white",
+            headerStyle: StackDesign,
+            headerTitleAlign: "center",
+          }}
+        />
+        <Stack.Screen
+          name="Favorites"
+          component={FavoritesScreen}
+          options={{
+            title: "Favorites Artists",
             headerRight: () => (
               <Avatar imgUrl="https://raw.githubusercontent.com/AlejandroGaGa/images-portafolio/main/ProfileGithub.jpeg" />
             ),

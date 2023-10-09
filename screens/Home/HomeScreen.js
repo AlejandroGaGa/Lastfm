@@ -11,6 +11,7 @@ const HomeScreen = () => {
   const [chargingData, setChargingData] = useState(false);
 
   useEffect(() => {
+    getAuthSession();
     setChargingData(false);
     async function getTopTenTracks() {
       const response = await getTopTracks();

@@ -10,13 +10,11 @@ export const SaveData = async (key, value) => {
   }
 };
 export const getData = async (key) => {
+  console.log(key);
   try {
     const value = await AsyncStorage.getItem(key);
     if (value !== null) {
-      console.log(
-        "🚀 ~ file: ButtonsOptions.js:21 ~ saveArtist ~ value:",
-        value
-      );
+      return value;
     }
   } catch (e) {
     return e;
