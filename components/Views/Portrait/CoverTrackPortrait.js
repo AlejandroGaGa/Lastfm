@@ -1,17 +1,17 @@
 import { View } from "react-native";
 import { Image } from "react-native";
-import { CoverStylePortrait } from "../../../styles/styles";
+import MusicPlayer from "./MusicPlayer";
 
-const CoverTrackPortrait = ({ img, style }) => {
+const CoverTrackPortrait = ({ img, borderRadius, width, height }) => {
   const URL = img["#text"];
 
   return (
-    <View>
+    <View style={{ elevation: 150 }}>
       <Image
-        style={CoverStylePortrait}
+        borderRadius={borderRadius}
         source={{ uri: URL }}
-        width={400}
-        height={400}
+        width={width}
+        height={height}
       />
     </View>
   );

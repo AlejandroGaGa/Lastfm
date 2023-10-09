@@ -21,25 +21,7 @@ const BtnOptionsStyle = {
   right: 10,
   top: 15,
 };
-const CoverStylePortrait = {
-  borderRadius: 40,
-  ...Platform.select({
-    ios: {
-      shadowColor: "#000",
-      shadowOffset: {
-        width: 0,
-        height: 2,
-      },
-      shadowOpacity: 0.25,
-      shadowRadius: 3.84,
-      width: 300,
-      height: 300,
-    },
-    android: {
-      elevation: 18,
-    },
-  }),
-};
+
 const ContainerCoverPortrait = {
   flexDirection: "row",
   alignItems: "center",
@@ -47,6 +29,18 @@ const ContainerCoverPortrait = {
   zIndex: 1,
   position: "absolute",
   top: 60,
+};
+const ContainerCoverPortraitLittle = {
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  gap: 15,
+  justifyContent: "flex-start",
+  zIndex: 1,
+  position: "absolute",
+  top: 40,
+  left: 40,
+  backgroundColor: "transparent",
 };
 
 const CoverStyle = {
@@ -109,7 +103,7 @@ const LeftColor = {
   top: 0,
   bottom: 0,
   left: 0,
-  width: "40%",
+  width: "28%",
   backgroundColor: "#fafbff",
   borderTopLeftRadius: 60,
 };
@@ -172,13 +166,45 @@ const ButtonsPlayerStyle = {
   alignItems: "center",
 };
 const ButtonPauseStyle = {
-  backgroundColor: "yellow",
+  backgroundColor: "#fafbff",
   borderRadius: 50,
   padding: 10,
 };
-
+/* LlittleComponent */
+const ContainerLittleModal = {
+  position: "absolute",
+  bottom: 0,
+  left: 0,
+  right: 0,
+  bottom: 0,
+  height: 200,
+  backgroundColor: "white",
+  zIndex: 1,
+  borderTopLeftRadius: 60,
+  borderTopRightRadius: 60,
+};
 /* Buttons options details music player */
 const ContentButtons = {};
+const ContentButtonsLittle = {
+  ...(Platform.OS === "ios" && {
+    marginLeft: "-10%",
+  }),
+  width: "40%",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  display: "flex",
+  flexDirection: "row",
+  gap: 10,
+  alignItems: "center",
+};
+
+const LittleSlider = {
+  width: "90%",
+  position: "absolute",
+  bottom: "20%",
+  left: "5%",
+};
 
 export {
   TrackStyle,
@@ -192,7 +218,6 @@ export {
   CenteredView,
   ModalView,
   LeftColor,
-  CoverStylePortrait,
   ContainerCoverPortrait,
   SliderStyle,
   MusicPlayerStyle,
@@ -202,4 +227,8 @@ export {
   TitlesDetailsContainerStyles,
   TitlesTextPortrait,
   ContentButtons,
+  ContainerLittleModal,
+  ContainerCoverPortraitLittle,
+  ContentButtonsLittle,
+  LittleSlider,
 };

@@ -17,7 +17,7 @@ const AppNavigation = () => {
           name="TopTracks"
           component={HomeScreen}
           options={{
-            title: "Top Tracks",
+            title: "Poll, Top Tracks this week",
             headerRight: () => (
               <Avatar imgUrl="https://raw.githubusercontent.com/AlejandroGaGa/images-portafolio/main/ProfileGithub.jpeg" />
             ),

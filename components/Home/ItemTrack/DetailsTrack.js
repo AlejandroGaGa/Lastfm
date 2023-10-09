@@ -5,7 +5,7 @@ import BtnOptions from "./BtnOptions";
 import ModalDetailsPortrait from "../../Views/Portrait/ModalDetailsPortrait";
 import { useState } from "react";
 
-const DetailsTrack = ({ track }) => {
+const DetailsTrack = ({ track, setTrackData }) => {
   const [modalVisible, setModalVisible] = useState(false);
   return (
     <>
@@ -29,6 +29,7 @@ const DetailsTrack = ({ track }) => {
         Track={track}
         modalVisible={modalVisible}
         setModalVisible={setModalVisible}
+        setTrackData={setTrackData}
       />
     </>
   );

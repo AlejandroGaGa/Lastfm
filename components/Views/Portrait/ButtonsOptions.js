@@ -3,7 +3,7 @@ import { ContentButtons } from "../../../styles/styles";
 
 const ButtonsOptions = () => {
   return (
-    <View style={ContentButtons}>
+    <View /* style={ContentButtons} */>
       <Text>s</Text>
     </View>
   );

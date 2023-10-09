@@ -13,7 +13,13 @@ const MusicPlayer = () => {
     <View style={MusicPlayerStyle}>
       <View style={SliderStyle}>
         <Text>3:30</Text>
-        <Slider minimumTrackTintColor="#007AFF" style={{ width: 300 }} />
+        <Slider
+          minimumTrackTintColor="#007AFF"
+          style={{ width: 300 }}
+          thumbTintColor="#333"
+          maximumTrackTintColor="#dedfe3"
+          minimumTrackTintColor="#333"
+        />
         <Text>4:00</Text>
       </View>
       <View style={ButtonsPlayerStyle}>

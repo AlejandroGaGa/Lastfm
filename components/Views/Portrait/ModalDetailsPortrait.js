@@ -4,6 +4,7 @@ import {
   CenteredView,
   ContainerCoverPortrait,
   ContainerDetailsStyle,
+  CoverStylePortrait,
   LeftColor,
   ModalView,
   TitlesDetailsContainerStyles,
@@ -14,13 +15,25 @@ import MusicPlayer from "./MusicPlayer";
 import ButtonsOptions from "./ButtonsOptions";
 import Modal from "react-native-modal";
 
-const ModalDetailsPortrait = ({ Track, modalVisible, setModalVisible }) => {
+const ModalDetailsPortrait = ({
+  Track,
+  modalVisible,
+  setModalVisible,
+  setTrackData,
+}) => {
+  const Platf = Platform.OS;
+  const ChangeLittleModal = () => {
+    setModalVisible(false);
+    setTrackData(Track);
+    console.log("Cerrado");
+  };
+
   return (
     <Modal
       transparent={true}
       isVisible={modalVisible}
       swipeDirection="down"
-      onSwipeComplete={() => setModalVisible(false)}
+      onSwipeComplete={ChangeLittleModal}
       backdropOpacity={0}
       backdropColor="black"
       style={{ margin: 0 }}
@@ -29,7 +42,13 @@ const ModalDetailsPortrait = ({ Track, modalVisible, setModalVisible }) => {
         <View style={ModalView}>
           <View style={LeftColor}></View>
           <View style={ContainerCoverPortrait}>
-            <CoverTrackPortrait img={Track.image[3]} />
+            <CoverTrackPortrait
+              img={Track.image[3]}
+              style={CoverStylePortrait}
+              borderRadius={50}
+              width={Platf === "ios" ? 300 : 400}
+              height={Platf === "ios" ? 300 : 400}
+            />
           </View>
           <View style={ContainerDetailsStyle}>
             <View style={TitlesDetailsContainerStyles}>
