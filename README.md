@@ -13,9 +13,17 @@
 ## 📗 Tabla de Contenidos
 
 
+## 🛠 Instalacíon: <a name="built-with"></a>
+- **Clonar repositorio**
+- **Node >= v16.16.0**
+- **react: 18.2.0**
+- **react-native: 0.72.5**
+- **npm install**
+- **npm start -c**
+
 ## 🛠 Construido con: <a name="built-with"></a>
 
-- **React Native EXPO**
+
 - **LASTFM**
 - **StyleSheet**
 - **JavaScript**
